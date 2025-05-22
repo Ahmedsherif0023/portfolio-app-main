@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-import logo from "../../../public/signaturee.png"
+import Logo from "../../../public/signaturee.png"
 
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="logo">
         <a href="/">
-          <img src={logo} alt="logo" />
+          <img src={Logo} alt="logo" />
         </a>
       </div>
       <div className="burger-menu" onClick={toggleMenu}>
