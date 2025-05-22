@@ -1,0 +1,151 @@
+:root{
+  --primary-color: #FD6F00;
+  --second-primary-color: #E46400;
+  --secondary-color: #f0f0f0;
+  --text-color: #959595;
+}
+
+
+.navbar {
+  position:absolute; /* Fix the navbar at the top */
+  top: 0; /* Align it to the top of the viewport */
+  width: 90%; /* Make it span the full width of the browser */
+  margin: auto;
+  height: 10vh; /* Adjust the height as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* Ensure it stays above other elements */
+  margin: -10px 0px;
+}
+
+.links a:hover {
+  color: var(--primary-color);
+  transition: 0.3s ease-in-out;
+}
+
+.links {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.links a {
+  margin: 0px 30px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.navbar .call-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--second-primary-color));
+  border: none;
+  color: var(--secondry-color);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 141px;
+  height: 43px;
+}
+.burger-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger-menu .line {
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  border-radius: 2px;
+}
+
+
+
+.call-btn.view-projects {
+  margin: 20px;
+}
+
+.call-btn.resume {
+  margin: 20px;
+}
+.call-btn:hover {
+  background: linear-gradient(135deg, var(--second-primary-color), var(--primary-color));
+  scale: 1.05;
+  transition: 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex; /* Show burger menu on small screens */
+    margin-left: 20px;
+    transition: ease-in-out 0.5s;
+  }
+
+  .links {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Adjust based on navbar height */
+    right: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .links.open {
+    display: flex; /* Show links when burger menu is toggled */
+    margin-right: 35%;
+    transition: ease-in-out 0.5s;
+  }
+
+  .links a {
+    color: var(--text-color);
+    font-weight: 650;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 2.5;
+  }
+
+  .links a:hover {
+    color: var(--primary-color);
+    transition: 0.3s ease-in-out;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto; /* Adjust height for mobile */
+    padding: 10px 20px; /* Add padding for mobile */
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar {
+    height: 70px;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .navbar h1 {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .links a {
+    margin: 0px 10px;
+  }
+  .navbar .call-btn {
+    scale: 0.8;
+    font-size: 20px;
+  }
+}
